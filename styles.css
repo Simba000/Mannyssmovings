@@ -1,1 +1,94 @@
+/* Blue + White theme for Manny's Moving */
+:root{
+  --bg:#ffffff;         /* page background */
+  --surface:#f8fafc;    /* light panel */
+  --card:#ffffff;       /* cards */
+  --text:#0f172a;       /* slate-900 */
+  --muted:#475569;      /* slate-600 */
+  --border:#e2e8f0;     /* slate-200 */
+  --brand:#2563eb;      /* blue-600 */
+  --brand-2:#1d4ed8;    /* blue-700 */
+  --accent:#60a5fa;     /* blue-400 */
+}
+*{box-sizing:border-box}
+html,body{
+  margin:0; padding:0; background:var(--bg); color:var(--text);
+  font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
+  line-height:1.5;
+}
+a{color:var(--brand); text-decoration:none}
+a:hover{ text-decoration:underline }
+
+.container{ max-width:1100px; margin:0 auto; padding:0 16px}
+.nav{
+  position:sticky; top:0; background:#ffffffcc; backdrop-filter:saturate(180%) blur(8px);
+  border-bottom:1px solid var(--border); z-index:10;
+}
+.nav-row{ display:flex; align-items:center; justify-content:space-between; height:64px }
+.brand{ font-weight:800; letter-spacing:.2px; color:var(--brand) }
+.menu a{ margin-left:16px }
+.menu .cta{ padding:8px 12px; border:1px solid var(--brand); border-radius:999px; color:var(--brand) }
+
+.hero{
+  padding:72px 0;
+  background:
+    radial-gradient(900px 400px at 0% 0%, rgba(37,99,235,.08), transparent),
+    radial-gradient(700px 300px at 100% 0%, rgba(96,165,250,.18), transparent);
+}
+.hero h1{ font-size:40px; margin:0 0 8px }
+.hero p{ color:var(--muted); margin:0 0 20px }
+.actions .btn{ margin-right:10px }
+.badges{ display:flex; gap:12px; list-style:none; padding:0; margin:20px 0 0; color:var(--muted); font-size:14px }
+
+.features{ padding:40px 0 }
+.grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:16px }
+.card{
+  background:var(--card); border:1px solid var(--border); border-radius:14px; padding:18px;
+  box-shadow:0 1px 2px rgba(0,0,0,.03);
+}
+.card h3{ margin-top:0 }
+
+.cta-banner{
+  padding:24px 0; border-top:1px solid var(--border); border-bottom:1px solid var(--border);
+  background:var(--surface);
+}
+.cta-banner .row{ display:flex; align-items:center; justify-content:space-between }
+
+.footer{ padding:28px 0 48px; color:var(--muted) }
+.tiny{ font-size:12px; color:var(--muted) }
+
+/* Buttons */
+.btn{
+  display:inline-block; padding:10px 16px; border-radius:10px; border:1px solid var(--border);
+  background:#fff; color:var(--text); font-weight:600; box-shadow:0 1px 1px rgba(0,0,0,.04);
+}
+.btn.primary{
+  background:linear-gradient(90deg,var(--brand),var(--brand-2));
+  border-color:transparent; color:#ffffff; font-weight:700;
+}
+.btn.outline{ background:transparent; border-color:var(--brand); color:var(--brand) }
+.btn.ghost{ background:#f1f5f9; border-color:#cbd5e1; color:var(--brand-2) }
+.btn.block{ display:block; text-align:center }
+
+/* Forms */
+.narrow{ max-width:760px; margin:24px auto }
+.form label{ display:block; margin-bottom:12px; font-size:14px; color:#0b1220 }
+.form input, .form select, .form textarea{
+  width:100%; padding:10px 12px; border-radius:10px; border:1px solid var(--border);
+  background:#ffffff; color:var(--text);
+}
+.success{
+  background:#ecfeff; border:1px solid #bae6fd; padding:10px 12px; border-radius:10px; color:#075985
+}
+.hidden{ display:none }
+
+/* Layout helpers */
+.grid-2{ display:grid; grid-template-columns:1fr 1fr; gap:12px }
+.grid-3{ display:grid; grid-template-columns:repeat(3,1fr); gap:12px }
+
+@media (max-width:900px){
+  .grid{ grid-template-columns:1fr }
+  .grid-2{ grid-template-columns:1fr }
+  .grid-3{ grid-template-columns:1fr }
+}
 
