@@ -1,1 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Book a Move — Manny's Moving</title>
+  <link rel="stylesheet" href="styles.css" />
+  <meta name="description" content="Schedule your moving date online." />
+  <!-- Calendly inline widget (replace data-url with your Calendly/TidyCal/Cal.com link) -->
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+  <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-row">
+      <a class="brand" href="index.html">Manny's Moving</a>
+      <nav class="menu">
+        <a href="quote.html">Get a Quote</a>
+        <a href="book.html" class="active">Book a Move</a>
+        <a href="pay.html">Pay</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container narrow">
+    <h1>Book a Move</h1>
+    <p>Pick a time that works for you. You’ll get confirmation by email/text.</p>
+
+    <div class="card">
+      <div class="cal-holder" id="calendly-inline-widget"
+           data-url="https://calendly.com/your-username/60min"
+           style="min-width:320px;height:720px;"></div>
+      <p class="tiny">If the scheduler doesn’t load, use this link:
+        <a href="https://calendly.com/your-username/60min" target="_blank" rel="noopener">Open Booking Page</a>
+      </p>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p><a href="index.html">← Back to Home</a></p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
 
