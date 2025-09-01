@@ -1,1 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pay — Manny's Moving</title>
+  <link rel="stylesheet" href="styles.css" />
+  <meta name="description" content="Secure payments for your move." />
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-row">
+      <a class="brand" href="index.html">Manny's Moving</a>
+      <nav class="menu">
+        <a href="quote.html">Get a Quote</a>
+        <a href="book.html">Book a Move</a>
+        <a href="pay.html" class="active">Pay</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container narrow">
+    <h1>Pay Securely</h1>
+    <p>Use a secure checkout link to pay your deposit or balance.</p>
+
+    <div class="card grid-3">
+      <!-- Replace the href values with your real Stripe Payment Links or PayPal/Square buttons -->
+      <a class="btn primary block" href="https://buy.stripe.com/test_deposit50" target="_blank" rel="noopener">Pay $50 Deposit</a>
+      <a class="btn outline block" href="https://buy.stripe.com/test_deposit100" target="_blank" rel="noopener">Pay $100 Deposit</a>
+      <a class="btn ghost block" href="https://buy.stripe.com/test_custom" target="_blank" rel="noopener">Pay Custom Invoice</a>
+    </div>
+
+    <p class="tiny">All payments are processed by a PCI-compliant provider. We never see your card details.</p>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p><a href="index.html">← Back to Home</a></p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
 
