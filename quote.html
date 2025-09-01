@@ -1,1 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Get a Quote — Manny's Moving</title>
+  <link rel="stylesheet" href="styles.css" />
+  <meta name="description" content="Request a fast, accurate moving quote." />
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-row">
+      <a class="brand" href="index.html">Manny's Moving</a>
+      <nav class="menu">
+        <a href="quote.html" class="active">Get a Quote</a>
+        <a href="book.html">Book a Move</a>
+        <a href="pay.html">Pay</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container narrow">
+    <h1>Get a Quote</h1>
+    <p>Fill this out — most quotes back within an hour during business times.</p>
+
+    <!-- Replace FORM_ENDPOINT with your Formspree endpoint, e.g. https://formspree.io/f/abcdwxyz -->
+    <form id="quoteForm" action="FORM_ENDPOINT" method="POST" class="card form">
+      <div class="grid-2">
+        <label>Full Name
+          <input name="name" required placeholder="Jane Doe" />
+        </label>
+        <label>Phone
+          <input name="phone" required placeholder="(###) ###-####" />
+        </label>
+        <label>Email
+          <input type="email" name="email" required placeholder="you@email.com" />
+        </label>
+        <label>Move Date
+          <input type="date" name="date" required />
+        </label>
+        <label>From Address
+          <input name="from_address" required placeholder="123 Main St, City, ST" />
+        </label>
+        <label>To Address
+          <input name="to_address" required placeholder="456 Oak Ave, City, ST" />
+        </label>
+        <label>Home Size
+          <select name="home_size" required>
+            <option value="">Select…</option>
+            <option>Studio</option>
+            <option>1 Bedroom</option>
+            <option>2 Bedrooms</option>
+            <option>3 Bedrooms</option>
+            <option>4+ Bedrooms</option>
+          </select>
+        </label>
+        <label>Stairs/Elevator
+          <select name="access" required>
+            <option value="">Select…</option>
+            <option>No Stairs</option>
+            <option>1 Flight</option>
+            <option>2+ Flights</option>
+            <option>Elevator</option>
+          </select>
+        </label>
+      </div>
+
+      <label>Items of Concern (piano, safe, etc.)
+        <input name="special_items" placeholder="e.g., upright piano, treadmill" />
+      </label>
+
+      <label>Packing Needed?
+        <select name="packing">
+          <option>No</option>
+          <option>Yes, full packing</option>
+          <option>Yes, some items only</option>
+        </select>
+      </label>
+
+      <label>Notes
+        <textarea name="notes" rows="4" placeholder="Anything else we should know?"></textarea>
+      </label>
+
+      <button class="btn primary" type="submit">Request Quote</button>
+      <p id="quoteSuccess" class="success hidden">Thanks! Your request was sent.</p>
+      <p class="tiny">By submitting, you agree we may contact you about your move.</p>
+    </form>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p><a href="index.html">← Back to Home</a></p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
 
