@@ -1,161 +1,137 @@
-/* -------- Base Styles -------- */
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
 body {
+  font-family: 'Montserrat', sans-serif;
   margin: 0;
-  font-family: 'Georgia', serif;
-  background-color: #faf3e0; /* vintage cream */
-  color: #2c2c2c;
+  padding: 0;
+  background: #FAF3E0; /* cream background */
+  color: #2B2B2B;
 }
 
+/* Header */
 header {
-  background-color: #4b2e2e; /* deep brown */
-  color: #f5e6cc;
-  padding: 25px;
-  text-align: center;
-  font-family: 'Garamond', serif;
-  letter-spacing: 1px;
+  background: #4B2E2E; /* vintage brown */
+  color: white;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-
 header h1 {
   margin: 0;
+  font-size: 24px;
 }
-
-nav {
-  background: #6e4b3a; /* warm brown */
-  display: flex;
-  justify-content: center;
-  padding: 12px 0;
-}
-
 nav a {
-  color: #f5e6cc;
-  margin: 0 20px;
+  color: white;
+  margin-left: 20px;
   text-decoration: none;
   font-weight: bold;
-  font-family: 'Courier New', monospace;
 }
-
 nav a:hover {
-  color: #ffe0b2;
   text-decoration: underline;
 }
 
-/* -------- Hero Section -------- */
+/* Hero Section */
 .hero {
-  height: 420px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #fff9f0;
-  text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
-  font-size: 2.4rem;
-  font-weight: bold;
-  font-family: 'Georgia', serif;
+  background: linear-gradient(rgba(75,46,46,0.6), rgba(75,46,46,0.6)),
+    url("https://i.imgur.com/8z8UhtV.png") center/cover no-repeat;
+  color: white;
   text-align: center;
-  padding: 20px;
+  padding: 100px 20px;
+}
+.hero h2 {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+.hero p {
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+.btn {
+  background: #D4A017; /* gold */
+  color: #222;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+}
+.btn:hover {
+  background: #B58900; /* darker gold */
 }
 
-/* -------- Sections -------- */
-section {
+/* Section Layout */
+.section {
   padding: 50px 20px;
   text-align: center;
 }
-
-section h2 {
-  font-family: 'Garamond', serif;
-  color: #4b2e2e;
-  font-size: 2rem;
-}
-
-/* -------- Services Cards -------- */
 .services {
-  display: flex;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
   margin-top: 30px;
-  flex-wrap: wrap;
 }
-
-.card {
-  background: #fff9f0;
-  border: 2px solid #d9b99b;
+.service-card {
+  background: white;
+  padding: 20px;
   border-radius: 12px;
-  width: 280px;
-  padding: 25px;
-  margin: 15px;
-  font-family: 'Courier New', monospace;
-  box-shadow: 0 5px 8px rgba(0,0,0,0.1);
-  transition: transform 0.2s ease-in-out;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
 }
-
-.card:hover {
-  transform: translateY(-5px);
-}
-
-.card img {
-  width: 100%;
-  border-radius: 8px;
+.service-card img {
+  width: 60px;
   margin-bottom: 15px;
 }
 
-/* -------- Forms -------- */
-form {
-  max-width: 500px;
-  margin: 40px auto;
-  background: #fff9f0;
-  padding: 30px;
-  border-radius: 12px;
-  border: 2px solid #d9b99b;
-  box-shadow: 0 5px 8px rgba(0,0,0,0.1);
-  text-align: left;
-}
-
-form label {
-  display: block;
-  margin: 15px 0 5px;
-  font-weight: bold;
-}
-
-form input,
-form textarea {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 1rem;
-}
-
-form button {
-  background: #6e4b3a;
+/* Promo Section */
+.promo {
+  background: #4B2E2E; /* vintage brown */
   color: white;
-  border: none;
-  padding: 12px 20px;
-  margin-top: 20px;
-  border-radius: 6px;
-  cursor: pointer;
-  font-weight: bold;
-  font-size: 1rem;
-}
-
-form button:hover {
-  background: #4b2e2e;
-}
-
-/* -------- Footer -------- */
-footer {
-  background: #4b2e2e;
-  color: #f5e6cc;
+  padding: 60px 20px;
   text-align: center;
-  padding: 20px;
-  margin-top: 50px;
-  font-family: 'Georgia', serif;
+}
+.promo h3 {
+  font-size: 28px;
+  margin-bottom: 10px;
 }
 
-/* -------- Responsive -------- */
-@media (max-width: 768px) {
-  .services {
-    flex-direction: column;
-    align-items: center;
-  }
-  .card {
-    width: 90%;
-  }
+/* Footer */
+footer {
+  background: #2B2B2B;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+
+/* Forms */
+form {
+  display: flex;
+  flex-direction: column;
+}
+label {
+  margin-top: 15px;
+  font-weight: bold;
+}
+input, select, textarea {
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #aaa;
+  border-radius: 6px;
+  background: #fff;
+}
+button {
+  margin-top: 20px;
+  background: #D4A017; /* gold */
+  color: #222;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+button:hover {
+  background: #B58900;
 }
