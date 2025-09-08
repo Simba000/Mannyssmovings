@@ -6,135 +6,151 @@
   <title>Manny's Moving</title>
   <style>
     body {
+      font-family: 'Arial', sans-serif;
       margin: 0;
-      font-family: 'Georgia', serif;
-      background-color: #faf3e0; /* vintage cream */
-      color: #2c2c2c;
+      padding: 0;
+      background: #f5f9ff;
+      color: #222;
     }
     header {
-      background-color: #4b2e2e; /* deep vintage brown */
-      color: #f5e6cc;
-      padding: 25px;
-      text-align: center;
-      font-family: 'Garamond', serif;
-      letter-spacing: 1px;
-    }
-    nav {
-      background: #6e4b3a; /* warm brown */
+      background: #002855;
+      color: white;
+      padding: 15px 30px;
       display: flex;
-      justify-content: center;
-      padding: 12px 0;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 24px;
     }
     nav a {
-      color: #f5e6cc;
-      margin: 0 20px;
+      color: white;
+      margin-left: 20px;
       text-decoration: none;
       font-weight: bold;
-      font-family: 'Courier New', monospace;
     }
     nav a:hover {
-      color: #ffe0b2;
       text-decoration: underline;
     }
     .hero {
-      background: url("https://images.unsplash.com/photo-1570129477492-45c003edd2be") center/cover no-repeat;
-      height: 400px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: #fff9f0;
-      text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
-      font-size: 2.8rem;
-      font-weight: bold;
-      font-family: 'Georgia', serif;
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("https://i.imgur.com/8z8UhtV.png") center/cover no-repeat;
+      color: white;
+      text-align: center;
+      padding: 100px 20px;
     }
-    section {
+    .hero h2 {
+      font-size: 40px;
+      margin-bottom: 15px;
+    }
+    .hero p {
+      font-size: 18px;
+      margin-bottom: 25px;
+    }
+    .btn {
+      background: #ffcc00;
+      color: #222;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .btn:hover {
+      background: #ffaa00;
+    }
+    .section {
       padding: 50px 20px;
       text-align: center;
     }
-    section h2 {
-      font-family: 'Garamond', serif;
-      color: #4b2e2e;
-      font-size: 2rem;
-    }
     .services {
-      display: flex;
-      justify-content: space-around;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 25px;
       margin-top: 30px;
-      flex-wrap: wrap;
     }
-    .card {
-      background: #fff9f0;
-      border: 2px solid #d9b99b;
+    .service-card {
+      background: white;
+      padding: 20px;
       border-radius: 12px;
-      width: 250px;
-      padding: 25px;
-      margin: 15px;
-      font-family: 'Courier New', monospace;
-      box-shadow: 0 5px 8px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .service-card img {
+      width: 60px;
+      margin-bottom: 15px;
+    }
+    .promo {
+      background: #002855;
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+    .promo h3 {
+      font-size: 28px;
+      margin-bottom: 10px;
     }
     footer {
-      background: #4b2e2e;
-      color: #f5e6cc;
+      background: #111;
+      color: white;
       text-align: center;
-      padding: 20px;
-      margin-top: 50px;
-      font-family: 'Georgia', serif;
+      padding: 15px;
     }
   </style>
 </head>
 <body>
-
   <header>
     <h1>Manny's Moving</h1>
-    <p>Reliable • Affordable • Stress-Free</p>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Services</a>
+      <a href="#" target="_blank">Free Quote</a>
+      <a href="#">Payments</a>
+      <a href="#">Contact</a>
+    </nav>
   </header>
 
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="#services">Services</a>
-    <a href="quote.html">Free Quote</a>
-    <a href="#contact">Contact</a>
-  </nav>
-
-  <div class="hero">
-    Moving Made Easy, The Old-School Way
-  </div>
-
-  <section id="about">
-    <h2>About Us</h2>
-    <p>Manny's Moving combines vintage service values with modern efficiency. 
-       Every move is handled with care and trust, just like the old days.</p>
+  <section class="hero">
+    <h2>We Make Moving Easy</h2>
+    <p>Fast, clean, and on time. From packing to delivery, we’ve got you covered.</p>
+    <a href="#" class="btn">Get a Free Quote</a>
   </section>
 
-  <section id="services">
+  <section class="section">
     <h2>Our Services</h2>
     <div class="services">
-      <div class="card">
-        <h3>Residential Moving</h3>
-        <p>Safe and efficient moving for your home and family.</p>
+      <div class="service-card">
+        <img src="https://img.icons8.com/color/96/moving-truck.png" alt="truck">
+        <h3>Long Distance Moves</h3>
+        <p>Moving to another state or across the country? We make it simple.</p>
       </div>
-      <div class="card">
-        <h3>Long Distance</h3>
-        <p>Reliable moving services across states and cities.</p>
+      <div class="service-card">
+        <img src="https://img.icons8.com/color/96/box.png" alt="box">
+        <h3>Packing & Storage</h3>
+        <p>Don’t want to pack? We’ll pack and store your items safely.</p>
       </div>
-      <div class="card">
-        <h3>Junk Removal</h3>
-        <p>Quick and affordable junk and furniture removal.</p>
+      <div class="service-card">
+        <img src="https://img.icons8.com/color/96/office.png" alt="office">
+        <h3>Office Moves</h3>
+        <p>Relocating your office? We’ll move it quickly and stress-free.</p>
+      </div>
+      <div class="service-card">
+        <img src="https://img.icons8.com/color/96/sofa.png" alt="furniture">
+        <h3>Furniture Delivery</h3>
+        <p>From couches to antiques, we deliver your furniture with care.</p>
       </div>
     </div>
   </section>
 
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <p>📞 Call us: <strong>425-560-5920</strong></p>
-    <p>📧 Email: <strong>mannysmoving@gmail.com</strong></p>
+  <section class="promo">
+    <h3>Save More With Safe Ship Moving Services</h3>
+    <p>Long distance moves starting at just <strong>$120</strong></p>
+    <a href="#" class="btn">Request Free Estimate</a>
   </section>
 
   <footer>
-    <p>&copy; 2025 Manny's Moving. All rights reserved.</p>
+    <p>© 2025 Manny's Moving | Quick, Neat, Reliable</p>
   </footer>
-<a href="quote.html" target="_blank">Free Quote</a>
-
 </body>
 </html>
