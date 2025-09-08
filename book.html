@@ -1,48 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Book a Move — Manny's Moving</title>
-  <link rel="stylesheet" href="styles.css" />
-  <meta name="description" content="Schedule your moving date online." />
-  <!-- Calendly inline widget (replace data-url with your Calendly/TidyCal/Cal.com link) -->
-  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-  <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Manny's Moving</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background: #f5f9ff;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: #002855;
+      color: white;
+      padding: 15px;
+      text-align: center;
+    }
+    h1 {
+      margin: 0;
+    }
+    .contact-container {
+      max-width: 700px;
+      margin: 40px auto;
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .info {
+      margin-bottom: 25px;
+    }
+    .info p {
+      margin: 8px 0;
+      font-size: 16px;
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    button {
+      margin-top: 20px;
+      background: #ffcc00;
+      color: #222;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      width: 100%;
+    }
+    button:hover {
+      background: #ffaa00;
+    }
+  </style>
 </head>
 <body>
-  <header class="nav">
-    <div class="container nav-row">
-      <a class="brand" href="index.html">Manny's Moving</a>
-      <nav class="menu">
-        <a href="quote.html">Get a Quote</a>
-        <a href="book.html" class="active">Book a Move</a>
-        <a href="pay.html">Pay</a>
-      </nav>
-    </div>
+  <header>
+    <h1>Contact Manny's Moving</h1>
   </header>
 
-  <main class="container narrow">
-    <h1>Book a Move</h1>
-    <p>Pick a time that works for you. You’ll get confirmation by email/text.</p>
-
-    <div class="card">
-      <div class="cal-holder" id="calendly-inline-widget"
-           data-url="https://calendly.com/your-username/60min"
-           style="min-width:320px;height:720px;"></div>
-      <p class="tiny">If the scheduler doesn’t load, use this link:
-        <a href="https://calendly.com/your-username/60min" target="_blank" rel="noopener">Open Booking Page</a>
-      </p>
+  <div class="contact-container">
+    <div class="info">
+      <p>📞 Phone: <strong>(425) 560-5920</strong></p>
+      <p>📧 Email: <strong>mannysmoving@example.com</strong></p>
+      <p>📍 Location: Kirkland, WA</p>
     </div>
-  </main>
 
-  <footer class="footer">
-    <div class="container">
-      <p><a href="index.html">← Back to Home</a></p>
-    </div>
-  </footer>
+    <form>
+      <label for="name">Your Name</label>
+      <input type="text" id="name" name="name" placeholder="John Doe" required>
 
-  <script src="script.js"></script>
+      <label for="email">Your Email</label>
+      <input type="email" id="email" name="email" placeholder="you@example.com" required>
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="4" placeholder="Write your message here..." required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
 </body>
 </html>
-
