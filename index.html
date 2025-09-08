@@ -1,215 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Manny's Moving — Affordable, Reliable Movers</title>
-  <link rel="stylesheet" href="styles.css" />
-  <meta name="description" content="Local moving services. Fast quotes, easy booking, safe payments." />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manny's Moving</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Georgia', serif;
+      background-color: #faf3e0; /* vintage cream */
+      color: #2c2c2c;
+    }
+    header {
+      background-color: #4b2e2e; /* deep vintage brown */
+      color: #f5e6cc;
+      padding: 25px;
+      text-align: center;
+      font-family: 'Garamond', serif;
+      letter-spacing: 1px;
+    }
+    nav {
+      background: #6e4b3a; /* warm brown */
+      display: flex;
+      justify-content: center;
+      padding: 12px 0;
+    }
+    nav a {
+      color: #f5e6cc;
+      margin: 0 20px;
+      text-decoration: none;
+      font-weight: bold;
+      font-family: 'Courier New', monospace;
+    }
+    nav a:hover {
+      color: #ffe0b2;
+      text-decoration: underline;
+    }
+    .hero {
+      background: url("https://images.unsplash.com/photo-1570129477492-45c003edd2be") center/cover no-repeat;
+      height: 400px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff9f0;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+      font-size: 2.8rem;
+      font-weight: bold;
+      font-family: 'Georgia', serif;
+    }
+    section {
+      padding: 50px 20px;
+      text-align: center;
+    }
+    section h2 {
+      font-family: 'Garamond', serif;
+      color: #4b2e2e;
+      font-size: 2rem;
+    }
+    .services {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 30px;
+      flex-wrap: wrap;
+    }
+    .card {
+      background: #fff9f0;
+      border: 2px solid #d9b99b;
+      border-radius: 12px;
+      width: 250px;
+      padding: 25px;
+      margin: 15px;
+      font-family: 'Courier New', monospace;
+      box-shadow: 0 5px 8px rgba(0,0,0,0.1);
+    }
+    footer {
+      background: #4b2e2e;
+      color: #f5e6cc;
+      text-align: center;
+      padding: 20px;
+      margin-top: 50px;
+      font-family: 'Georgia', serif;
+    }
+  </style>
 </head>
 <body>
-  <header class="nav">
-    <div class="container nav-row">
-      <a class="brand" href="index.html">Manny's Moving</a>
-      <nav class="menu">
-        <a href="quote.html">Get a Quote</a>
-        <a href="book.html">Book a Move</a>
-        <a href="pay.html">Pay</a>
-        <a class="cta call" href="tel:+14255605920">Call Now</a>
-      </nav>
-    </div>
+
+  <header>
+    <h1>Manny's Moving</h1>
+    <p>Reliable • Affordable • Stress-Free</p>
   </header>
 
-  <section class="hero">
-    <div class="container">
-      <h1>Stress-free moves. Honest prices.</h1>
-      <p>Serving your area with careful packing, efficient loading, and friendly pros.</p>
-      <div class="actions">
-        <a class="btn primary" href="quote.html">Get a Quote</a>
-        <a class="btn outline" href="book.html">Book a Move</a>
-        <a class="btn ghost" href="pay.html">Pay Deposit</a>
-      </div>
-      <ul class="badges">
-        <li>Licensed & Insured</li>
-        <li>On-time Guarantee</li>
-        <li>Transparent Rates</li>
-      </ul>
-    </div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="#services">Services</a>
+    <a href="quote.html">Free Quote</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="hero">
+    Moving Made Easy, The Old-School Way
+  </div>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p>Manny's Moving combines vintage service values with modern efficiency. 
+       Every move is handled with care and trust, just like the old days.</p>
   </section>
 
-  <section class="features">
-    <div class="container grid">
+  <section id="services">
+    <h2>Our Services</h2>
+    <div class="services">
       <div class="card">
-        <h3>Apartment & Home Moves</h3>
-        <p>From studios to 5-bedroom homes — stairs, elevators, and long carries handled with care.</p>
+        <h3>Residential Moving</h3>
+        <p>Safe and efficient moving for your home and family.</p>
       </div>
       <div class="card">
-        <h3>Packing & Unpacking</h3>
-        <p>Full-service packing or just the tricky stuff. Boxes, wrapping, and labeling available.</p>
+        <h3>Long Distance</h3>
+        <p>Reliable moving services across states and cities.</p>
       </div>
       <div class="card">
-        <h3>Special Items</h3>
-        <p>Pianos, safes, gym equipment, and antiques — secured and transported the right way.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="cta-banner">
-    <div class="container row">
-      <p>Ready to go?</p>
-      <div>
-        <a class="btn primary" href="quote.html">Get a Quote</a>
-        <a class="btn outline" href="book.html">Schedule</a>
+        <h3>Junk Removal</h3>
+        <p>Quick and affordable junk and furniture removal.</p>
       </div>
     </div>
   </section>
 
-  <footer class="footer">
-    <div class="container">
-      <p><strong>Manny's Moving</strong> • Fast quotes • Easy booking • Safe payments</p>
-      <p>Email: <a href="mailto:info@mannysmoving.example">info@mannysmoving.example</a> • Phone: <a href="tel:+14255605920">(425) 560-5920</a></p>
-      <p class="tiny">© <span id="year"></span> Manny's Moving. All rights reserved.</p>
-    </div>
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>📞 Call us: <strong>425-560-5920</strong></p>
+    <p>📧 Email: <strong>mannysmoving@gmail.com</strong></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Manny's Moving. All rights reserved.</p>
   </footer>
 
-  <script src="script.js"></script>
 </body>
 </html>
-/* Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* General */
-body {
-  font-family: 'Arial', sans-serif;
-  line-height: 1.6;
-  color: #333;
-}
-.container {
-  width: 90%;
-  max-width: 1100px;
-  margin: auto;
-  text-align: center;
-}
-
-/* Navigation */
-header {
-  background: white;
-  padding: 1rem 0;
-  border-bottom: 1px solid #eee;
-}
-header .logo {
-  float: left;
-  color: #0044cc;
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-header nav {
-  float: right;
-}
-header nav a {
-  margin-left: 20px;
-  text-decoration: none;
-  color: #333;
-  font-weight: 500;
-  transition: color 0.3s ease;
-}
-header nav a:hover {
-  color: #0044cc;
-}
-header::after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Hero Section */
-.hero {
-  background: url('truck.jpg') no-repeat center center/cover;
-  height: 90vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  text-align: center;
-}
-.hero-text h2 {
-  font-size: 3rem;
-  margin-bottom: 15px;
-}
-.hero-text p {
-  font-size: 1.2rem;
-  margin-bottom: 20px;
-}
-.btn {
-  display: inline-block;
-  padding: 12px 25px;
-  background: #0044cc;
-  color: white;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background 0.3s ease;
-}
-.btn:hover {
-  background: #002a80;
-}
-
-/* Sections */
-.section {
-  padding: 4rem 0;
-}
-.section.light {
-  background: #f9f9f9;
-}
-h2 {
-  margin-bottom: 20px;
-  font-size: 2rem;
-  color: #0044cc;
-}
-.grid {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-.card {
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-  flex: 1;
-  min-width: 250px;
-  transition: transform 0.3s ease;
-}
-.card:hover {
-  transform: translateY(-5px);
-}
-
-/* Form */
-form input, form textarea {
-  width: 100%;
-  padding: 12px;
-  margin: 10px 0;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  font-size: 1rem;
-}
-form button {
-  width: 100%;
-  padding: 12px;
-  font-size: 1rem;
-  cursor: pointer;
-}
-
-/* Footer */
-footer {
-  background: #0044cc;
-  color: white;
-  padding: 1rem;
-  text-align: center;
-}
-
