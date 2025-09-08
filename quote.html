@@ -3,33 +3,64 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Payment - Manny's Moving</title>
+  <title>Free Quote & Rates - Manny's Moving</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <header>
-    <h1>Payment Options</h1>
+    <h1>Free Quote & Rates</h1>
+    <p>Transparent Pricing • No Hidden Fees</p>
   </header>
 
   <nav>
     <a href="index.html">Home</a>
     <a href="services.html">Services</a>
-    <a href="quote.html">Free Quote</a>
+    <a href="quote.html" target="_blank">Free Quote</a>
     <a href="payment.html">Payment</a>
     <a href="contact.html">Contact</a>
   </nav>
 
   <section>
-    <h2>How to Pay</h2>
-    <p>We make payments simple and flexible:</p>
-    <ul>
-      <li>💳 Credit/Debit Card</li>
-      <li>💵 Cash on Delivery</li>
-      <li>📱 Mobile Payment (Zelle, CashApp, Venmo)</li>
-      <li>📑 Invoices for business clients</li>
-    </ul>
-    <p>Please contact us for exact pricing before paying.</p>
+    <h2>Estimated Rates</h2>
+    <p>These are our average moving rates. Final cost may vary based on distance, items, and labor time.</p>
+
+    <div class="services">
+      <div class="card">
+        <img src="https://cdn.pixabay.com/photo/2016/03/31/20/52/boxes-1293820_1280.png" alt="Residential Moving">
+        <h3>Residential Moves</h3>
+        <p>Starting at <strong>$120/hr</strong> (2 movers + truck)</p>
+      </div>
+      <div class="card">
+        <img src="https://cdn.pixabay.com/photo/2014/04/02/14/06/moving-307821_1280.png" alt="Long Distance">
+        <h3>Long Distance</h3>
+        <p>Starting at <strong>$2.50 per mile</strong></p>
+      </div>
+      <div class="card">
+        <img src="https://cdn.pixabay.com/photo/2013/07/13/12/07/recycle-159866_1280.png" alt="Junk Removal">
+        <h3>Junk Removal</h3>
+        <p>Starting at <strong>$100 per load</strong></p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Request a Free Quote</h2>
+    <form>
+      <label>Full Name</label>
+      <input type="text" required>
+
+      <label>Phone</label>
+      <input type="tel" required>
+
+      <label>Email</label>
+      <input type="email" required>
+
+      <label>Move Details</label>
+      <textarea rows="4" placeholder="Tell us about your move..."></textarea>
+
+      <button type="submit">Get My Quote</button>
+    </form>
   </section>
 
   <footer>
