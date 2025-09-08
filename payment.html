@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment | Manny's Moving</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background: #f5f9ff;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: #002855;
+      color: white;
+      padding: 15px;
+      text-align: center;
+    }
+    h1 {
+      margin: 0;
+    }
+    .payment-container {
+      max-width: 600px;
+      margin: 40px auto;
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    input, select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    button {
+      margin-top: 20px;
+      background: #ffcc00;
+      color: #222;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      width: 100%;
+    }
+    button:hover {
+      background: #ffaa00;
+    }
+    .note {
+      margin-top: 20px;
+      font-size: 14px;
+      color: #555;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Make a Payment</h1>
+  </header>
+
+  <div class="payment-container">
+    <form>
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" placeholder="Your name" required>
+
+      <label for="amount">Payment Amount ($)</label>
+      <input type="number" id="amount" name="amount" placeholder="120" required>
+
+      <label for="method">Payment Method</label>
+      <select id="method" name="method">
+        <option>Credit/Debit Card</option>
+        <option>PayPal</option>
+        <option>Venmo</option>
+        <option>Zelle</option>
+      </select>
+
+      <label for="card">Card Number</label>
+      <input type="text" id="card" name="card" placeholder="1234 5678 9012 3456">
+
+      <label for="exp">Expiration Date</label>
+      <input type="text" id="exp" name="exp" placeholder="MM/YY">
+
+      <label for="cvv">CVV</label>
+      <input type="text" id="cvv" name="cvv" placeholder="123">
+
+      <button type="submit">Submit Payment</button>
+    </form>
+    <p class="note">🔒 Secure payment — your info stays safe.</p>
+  </div>
+</body>
+</html>
