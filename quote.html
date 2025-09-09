@@ -4,10 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1.0" />
   <title>Free Quote | Manny's Moving</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css?v=4" />
+  <!-- Modern sans serif just for this page -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
-<body>
-  <!-- Header / Nav -->
+<body class="quote-modern">
+  <!-- Header / Nav (same structure as index) -->
   <header>
     <div class="container header-inner">
       <h1>Manny's Moving</h1>
@@ -21,73 +23,69 @@
     </div>
   </header>
 
-  <!-- Page hero -->
-  <section class="page-hero" aria-label="Free Quote">
+  <!-- Simple light hero (no photo) -->
+  <section class="q-hero">
     <div class="container">
       <h2>Get a Free Moving Quote</h2>
-      <p>Fill out the form below and we’ll get back to you quickly.</p>
+      <p>Fill out the form and we’ll get back to you as soon as possible.</p>
     </div>
   </section>
 
   <!-- Form card -->
   <section class="section">
     <div class="container">
-      <div class="form-card">
-        <div class="form-title">
-          <h3>Tell Us About Your Move</h3>
-          <p class="muted">Fields marked <span class="req">*</span> are required.</p>
-        </div>
+      <div class="q-card">
+        <h3 class="q-title">Tell Us About Your Move</h3>
 
         <form id="quoteForm" novalidate>
-          <!-- Names -->
-          <div class="form-row two">
-            <div class="field">
+          <!-- Row 1 -->
+          <div class="q-grid q-two">
+            <div class="q-field">
               <label for="first">First Name <span class="req">*</span></label>
               <input id="first" name="first" type="text" placeholder="First name" required>
             </div>
-            <div class="field">
+            <div class="q-field">
               <label for="last">Last Name <span class="req">*</span></label>
               <input id="last" name="last" type="text" placeholder="Last name" required>
             </div>
           </div>
 
-          <!-- Contact -->
-          <div class="form-row two">
-            <div class="field">
+          <!-- Row 2 -->
+          <div class="q-grid q-two">
+            <div class="q-field">
               <label for="email">Email <span class="req">*</span></label>
               <input id="email" name="email" type="email" placeholder="you@example.com" required>
             </div>
-            <div class="field">
+            <div class="q-field">
               <label for="phone">Phone <span class="req">*</span></label>
               <input id="phone" name="phone" type="tel" placeholder="(123) 456-7890" required>
             </div>
           </div>
 
-          <!-- Addresses -->
-          <div class="form-row two">
-            <div class="field input-with-icon">
+          <!-- Row 3 -->
+          <div class="q-grid q-two">
+            <div class="q-field q-icon">
               <label for="pickup">Complete Current Address <span class="req">*</span></label>
-              <span class="input-icon" aria-hidden="true">📍</span>
+              <span class="q-icon-el" aria-hidden="true">📍</span>
               <input id="pickup" name="pickup" type="text" placeholder="123 Main St, City, State" required>
             </div>
-            <div class="field input-with-icon">
+            <div class="q-field q-icon">
               <label for="dropoff">Complete New Address <span class="req">*</span></label>
-              <span class="input-icon" aria-hidden="true">📍</span>
+              <span class="q-icon-el" aria-hidden="true">📍</span>
               <input id="dropoff" name="dropoff" type="text" placeholder="456 Oak Ave, City, State" required>
             </div>
           </div>
 
-          <!-- Details -->
-          <div class="form-row three">
-            <div class="field">
+          <!-- Row 4 -->
+          <div class="q-grid q-three">
+            <div class="q-field">
               <label for="date">Move Date</label>
-              <input id="date" name="date" type="date" placeholder="MM/DD/YYYY">
+              <input id="date" name="date" type="date">
             </div>
-
-            <div class="field">
-              <label for="size">Current Residence Size <span class="req">*</span></label>
+            <div class="q-field">
+              <label for="size">Home/Office Size <span class="req">*</span></label>
               <select id="size" name="size" required>
-                <option value="">Choose...</option>
+                <option value="">Select...</option>
                 <option>Studio</option>
                 <option>1 Bedroom</option>
                 <option>2 Bedrooms</option>
@@ -98,11 +96,10 @@
                 <option>Office - Large</option>
               </select>
             </div>
-
-            <div class="field">
+            <div class="q-field">
               <label for="source">How Did You Find Us? <span class="req">*</span></label>
               <select id="source" name="source" required>
-                <option value="">Choose...</option>
+                <option value="">Select...</option>
                 <option>Google</option>
                 <option>Instagram</option>
                 <option>Friend/Family</option>
@@ -112,27 +109,25 @@
             </div>
           </div>
 
-          <!-- Message -->
-          <div class="form-row one">
-            <div class="field">
+          <!-- Row 5 -->
+          <div class="q-grid q-one">
+            <div class="q-field">
               <label for="details">Your Message</label>
               <textarea id="details" name="details" rows="5" placeholder="Stairs? Elevator? Parking? # of rooms? Fragile items?"></textarea>
             </div>
           </div>
 
-          <!-- Actions -->
-          <div class="form-actions">
-            <a class="link" href="index.html">← Back to Home</a>
+          <div class="q-actions">
+            <a class="q-link" href="index.html">← Back to Home</a>
             <button type="submit" class="btn btn-wide">Get My Free Quote</button>
           </div>
 
-          <p class="smallprint">By clicking submit, you’re sending us your info so we can prepare a quote. We’ll reach out if we need more details.</p>
+          <p class="q-note">By submitting, you give us permission to contact you about this quote.</p>
         </form>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
   <footer>
     <div class="container">
       <p>&copy; 2025 Manny's Moving. Quick, Neat, Reliable.</p>
