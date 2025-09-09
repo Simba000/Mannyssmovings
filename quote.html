@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Header / Nav (same structure as index) -->
+  <!-- Header / Nav -->
   <header>
     <div class="container header-inner">
       <h1>Manny's Moving</h1>
@@ -21,73 +21,124 @@
     </div>
   </header>
 
-  <!-- Small page hero -->
+  <!-- Page hero -->
   <section class="page-hero" aria-label="Free Quote">
     <div class="container">
-      <h2>Get Your Free Moving Quote</h2>
-      <p>Fast, simple, no pressure. Tell us where and what—we’ll reply quickly.</p>
+      <h2>Get a Free Moving Quote</h2>
+      <p>Fill out the form below and we’ll get back to you quickly.</p>
     </div>
   </section>
 
   <!-- Form card -->
-  <div class="container">
-    <div class="container-card">
-      <form>
-        <div class="form-grid">
-          <div>
-            <label for="name">Full Name</label>
-            <input id="name" name="name" type="text" placeholder="Your name" required />
-          </div>
-
-          <div>
-            <label for="phone">Phone</label>
-            <input id="phone" name="phone" type="tel" placeholder="(123) 456-7890" required />
-          </div>
-
-          <div>
-            <label for="email">Email</label>
-            <input id="email" name="email" type="email" placeholder="you@example.com" required />
-          </div>
-
-          <div>
-            <label for="type">Type of Move</label>
-            <select id="type" name="type">
-              <option>Home Move</option>
-              <option>Office Move</option>
-              <option>Furniture Delivery</option>
-              <option>Long Distance Move</option>
-            </select>
-          </div>
-
-          <div class="full">
-            <label for="pickup">Pickup Address</label>
-            <input id="pickup" name="pickup" type="text" placeholder="123 Main St, City, State" required />
-          </div>
-
-          <div class="full">
-            <label for="dropoff">Drop-off Address</label>
-            <input id="dropoff" name="dropoff" type="text" placeholder="456 New St, City, State" required />
-          </div>
-
-          <div class="full">
-            <label for="details">Extra Details</label>
-            <textarea id="details" name="details" rows="4" placeholder="Stairs? Elevator? Number of rooms? Fragile items?"></textarea>
-          </div>
+  <section class="section">
+    <div class="container">
+      <div class="form-card">
+        <div class="form-title">
+          <h3>Tell Us About Your Move</h3>
+          <p class="muted">Fields marked <span class="req">*</span> are required.</p>
         </div>
 
-        <button type="submit">Get My Free Quote</button>
-        <p class="tip">💡 We usually reply the same day.</p>
-      </form>
-    </div>
-  </div>
+        <form id="quoteForm" novalidate>
+          <!-- Names -->
+          <div class="form-row two">
+            <div class="field">
+              <label for="first">First Name <span class="req">*</span></label>
+              <input id="first" name="first" type="text" placeholder="First name" required>
+            </div>
+            <div class="field">
+              <label for="last">Last Name <span class="req">*</span></label>
+              <input id="last" name="last" type="text" placeholder="Last name" required>
+            </div>
+          </div>
 
+          <!-- Contact -->
+          <div class="form-row two">
+            <div class="field">
+              <label for="email">Email <span class="req">*</span></label>
+              <input id="email" name="email" type="email" placeholder="you@example.com" required>
+            </div>
+            <div class="field">
+              <label for="phone">Phone <span class="req">*</span></label>
+              <input id="phone" name="phone" type="tel" placeholder="(123) 456-7890" required>
+            </div>
+          </div>
+
+          <!-- Addresses -->
+          <div class="form-row two">
+            <div class="field input-with-icon">
+              <label for="pickup">Complete Current Address <span class="req">*</span></label>
+              <span class="input-icon" aria-hidden="true">📍</span>
+              <input id="pickup" name="pickup" type="text" placeholder="123 Main St, City, State" required>
+            </div>
+            <div class="field input-with-icon">
+              <label for="dropoff">Complete New Address <span class="req">*</span></label>
+              <span class="input-icon" aria-hidden="true">📍</span>
+              <input id="dropoff" name="dropoff" type="text" placeholder="456 Oak Ave, City, State" required>
+            </div>
+          </div>
+
+          <!-- Details -->
+          <div class="form-row three">
+            <div class="field">
+              <label for="date">Move Date</label>
+              <input id="date" name="date" type="date" placeholder="MM/DD/YYYY">
+            </div>
+
+            <div class="field">
+              <label for="size">Current Residence Size <span class="req">*</span></label>
+              <select id="size" name="size" required>
+                <option value="">Choose...</option>
+                <option>Studio</option>
+                <option>1 Bedroom</option>
+                <option>2 Bedrooms</option>
+                <option>3 Bedrooms</option>
+                <option>4+ Bedrooms</option>
+                <option>Office - Small</option>
+                <option>Office - Medium</option>
+                <option>Office - Large</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="source">How Did You Find Us? <span class="req">*</span></label>
+              <select id="source" name="source" required>
+                <option value="">Choose...</option>
+                <option>Google</option>
+                <option>Instagram</option>
+                <option>Friend/Family</option>
+                <option>Flyer/Pamphlet</option>
+                <option>Other</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Message -->
+          <div class="form-row one">
+            <div class="field">
+              <label for="details">Your Message</label>
+              <textarea id="details" name="details" rows="5" placeholder="Stairs? Elevator? Parking? # of rooms? Fragile items?"></textarea>
+            </div>
+          </div>
+
+          <!-- Actions -->
+          <div class="form-actions">
+            <a class="link" href="index.html">← Back to Home</a>
+            <button type="submit" class="btn btn-wide">Get My Free Quote</button>
+          </div>
+
+          <p class="smallprint">By clicking submit, you’re sending us your info so we can prepare a quote. We’ll reach out if we need more details.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
   <footer>
     <div class="container">
       <p>&copy; 2025 Manny's Moving. Quick, Neat, Reliable.</p>
     </div>
   </footer>
 
-  <!-- Optional: your JS formatter/handlers -->
   <script src="script.js" defer></script>
 </body>
 </html>
