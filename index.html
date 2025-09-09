@@ -6,59 +6,91 @@
   <title>Manny's Moving</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-  <script src="script.js" defer></script>
 <body>
+  <!-- Header / Nav -->
   <header>
-    <h1>Manny's Moving</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="quote.html" target="_blank">Free Quote</a>
-      <a href="payment.html" target="_blank">Payments</a>
-      <a href="contact.html" target="_blank">Contact</a>
-    </nav>
+    <div class="container header-inner">
+      <h1>Manny's Moving</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="#services">Services</a>
+        <a href="quote.html" target="_blank">Free Quote</a>
+        <a href="payment.html" target="_blank">Payments</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
   </header>
 
-  <section class="hero">
-    <h2>We Make Moving Easy</h2>
-    <p>Fast, clean, and on time. From packing to delivery, we’ve got you covered.</p>
-    <a class="btn" href="quote.html" target="_blank">Get a Free Quote</a>
+  <!-- Hero -->
+  <section class="hero" aria-label="Welcome">
+    <div class="container hero-inner">
+      <h2>Moving Made Easy — The Old-School Way</h2>
+      <p>Fast, clean, and on time. From packing to delivery, we’ve got you covered.</p>
+      <a class="btn" href="quote.html" target="_blank">Get a Free Quote</a>
+    </div>
   </section>
 
-  <section class="section">
-    <h2>Our Services</h2>
-    <div class="services">
-      <div class="service-card">
-        <img src="https://img.icons8.com/color/96/moving-truck.png" alt="moving truck icon" />
-        <h3>Long Distance Moves</h3>
-        <p>Moving to another state or across the country? We make it simple.</p>
-      </div>
-      <div class="service-card">
-        <img src="https://img.icons8.com/color/96/box.png" alt="box icon" />
-        <h3>Packing & Storage</h3>
-        <p>Don’t want to pack? We’ll pack and store your items safely.</p>
-      </div>
-      <div class="service-card">
-        <img src="https://img.icons8.com/color/96/office.png" alt="office icon" />
-        <h3>Office Moves</h3>
-        <p>Relocating your office? We’ll move it quickly and stress-free.</p>
-      </div>
-      <div class="service-card">
-        <img src="https://img.icons8.com/color/96/sofa.png" alt="sofa icon" />
-        <h3>Furniture Delivery</h3>
-        <p>From couches to antiques, we deliver your furniture with care.</p>
+  <!-- About -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2>About Us</h2>
+      <p>Manny's Moving mixes vintage service values with modern efficiency.
+         Every move is handled with care and respect — just like the old days.</p>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="section">
+    <div class="container">
+      <h2>Our Services</h2>
+      <div class="services">
+        <div class="card">
+          <div class="icon" aria-hidden="true">🚚</div>
+          <h3>Long Distance Moves</h3>
+          <p>Moving to another state or across the country? We make it simple.</p>
+        </div>
+        <div class="card">
+          <div class="icon" aria-hidden="true">📦</div>
+          <h3>Packing & Storage</h3>
+          <p>Don’t want to pack? We’ll pack and store your items safely.</p>
+        </div>
+        <div class="card">
+          <div class="icon" aria-hidden="true">🏢</div>
+          <h3>Office Moves</h3>
+          <p>Relocating your office? We’ll move it quickly and stress-free.</p>
+        </div>
+        <div class="card">
+          <div class="icon" aria-hidden="true">🛋️</div>
+          <h3>Furniture Delivery</h3>
+          <p>From couches to antiques, we deliver your furniture with care.</p>
+        </div>
       </div>
     </div>
   </section>
 
+  <!-- Promo -->
   <section class="promo">
-    <h3>Save More With Safe Ship Moving Services</h3>
-    <p>Long distance moves starting at just <strong>$120</strong></p>
-    <a class="btn" href="quote.html" target="_blank">Request Free Estimate</a>
+    <div class="container">
+      <h3>Save More With Safe Ship Moving Services</h3>
+      <p>Long distance moves starting at just <strong>$120</strong>.</p>
+      <a class="btn" href="quote.html" target="_blank">Request Free Estimate</a>
+    </div>
   </section>
 
+  <!-- Contact -->
+  <section id="contact" class="section">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <p>📞 <strong>(425) 560-5920</strong></p>
+      <p>📧 <strong>mannysmoving@gmail.com</strong></p>
+    </div>
+  </section>
+
+  <!-- Footer -->
   <footer>
-    <p>© 2025 Manny's Moving | Quick, Neat, Reliable</p>
+    <div class="container">
+      <p>&copy; 2025 Manny's Moving. Quick, Neat, Reliable.</p>
+    </div>
   </footer>
 </body>
 </html>
-<link rel="stylesheet" href="style.css?v=2">
