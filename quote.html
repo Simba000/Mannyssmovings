@@ -7,40 +7,87 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- Header / Nav (same structure as index) -->
   <header>
-    <h1>Request a Free Quote</h1>
+    <div class="container header-inner">
+      <h1>Manny's Moving</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="index.html#services">Services</a>
+        <a href="quote.html" aria-current="page">Free Quote</a>
+        <a href="payment.html" target="_blank">Payments</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </div>
   </header>
 
-  <div class="container-card">
-    <form>
-      <label for="name">Full Name</label>
-      <input id="name" name="name" type="text" placeholder="Your name" required />
+  <!-- Small page hero -->
+  <section class="page-hero" aria-label="Free Quote">
+    <div class="container">
+      <h2>Get Your Free Moving Quote</h2>
+      <p>Fast, simple, no pressure. Tell us where and what—we’ll reply quickly.</p>
+    </div>
+  </section>
 
-      <label for="phone">Phone</label>
-      <input id="phone" name="phone" type="tel" placeholder="123-456-7890" required />
+  <!-- Form card -->
+  <div class="container">
+    <div class="container-card">
+      <form>
+        <div class="form-grid">
+          <div>
+            <label for="name">Full Name</label>
+            <input id="name" name="name" type="text" placeholder="Your name" required />
+          </div>
 
-      <label for="email">Email</label>
-      <input id="email" name="email" type="email" placeholder="you@example.com" required />
+          <div>
+            <label for="phone">Phone</label>
+            <input id="phone" name="phone" type="tel" placeholder="(123) 456-7890" required />
+          </div>
 
-      <label for="pickup">Pickup Address</label>
-      <input id="pickup" name="pickup" type="text" placeholder="123 Main St, City, State" required />
+          <div>
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="you@example.com" required />
+          </div>
 
-      <label for="dropoff">Drop-off Address</label>
-      <input id="dropoff" name="dropoff" type="text" placeholder="456 New St, City, State" required />
+          <div>
+            <label for="type">Type of Move</label>
+            <select id="type" name="type">
+              <option>Home Move</option>
+              <option>Office Move</option>
+              <option>Furniture Delivery</option>
+              <option>Long Distance Move</option>
+            </select>
+          </div>
 
-      <label for="type">Type of Move</label>
-      <select id="type" name="type">
-        <option>Home Move</option>
-        <option>Office Move</option>
-        <option>Furniture Delivery</option>
-        <option>Long Distance Move</option>
-      </select>
+          <div class="full">
+            <label for="pickup">Pickup Address</label>
+            <input id="pickup" name="pickup" type="text" placeholder="123 Main St, City, State" required />
+          </div>
 
-      <label for="details">Extra Details</label>
-      <textarea id="details" name="details" rows="4" placeholder="Anything else we should know?"></textarea>
+          <div class="full">
+            <label for="dropoff">Drop-off Address</label>
+            <input id="dropoff" name="dropoff" type="text" placeholder="456 New St, City, State" required />
+          </div>
 
-      <button type="submit">Get My Free Quote</button>
-    </form>
+          <div class="full">
+            <label for="details">Extra Details</label>
+            <textarea id="details" name="details" rows="4" placeholder="Stairs? Elevator? Number of rooms? Fragile items?"></textarea>
+          </div>
+        </div>
+
+        <button type="submit">Get My Free Quote</button>
+        <p class="tip">💡 We usually reply the same day.</p>
+      </form>
+    </div>
   </div>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Manny's Moving. Quick, Neat, Reliable.</p>
+    </div>
+  </footer>
+
+  <!-- Optional: your JS formatter/handlers -->
+  <script src="script.js" defer></script>
 </body>
 </html>
