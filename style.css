@@ -142,3 +142,40 @@ footer{
   .hero{ padding:70px 0; }
   .hero h2{ font-size:32px; }
 }
+/* Page hero for inner pages */
+.page-hero{
+  background: linear-gradient(0deg, rgba(75,46,46,.75), rgba(75,46,46,.75)),
+              url("https://images.unsplash.com/photo-1570129477492-45c003edd2be") center/cover no-repeat;
+  color: var(--cream-text);
+  padding: 48px 0;
+  text-align: center;
+  border-bottom: 2px solid var(--tan);
+}
+.page-hero h2{
+  font-family: 'Garamond', serif;
+  font-size: 32px;
+  margin-bottom: 6px;
+}
+.page-hero p{ opacity:.95; }
+
+/* Nice 2-column form on wide screens, 1-column on mobile */
+.form-grid{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px 18px;
+}
+.form-grid .full{ grid-column: 1/-1; }
+
+@media (min-width: 720px){
+  .form-grid{
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Small helper text */
+.tip{
+  margin-top: 10px;
+  text-align: center;
+  font-size: 14px;
+  color: #666;
+}
